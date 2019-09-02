@@ -19,6 +19,7 @@ i.drumsOne.go(0);
 i.drumsOne.go(33);
 
 i.drumsOne.fx = \reverb;
+i.drumsOne.fx = \delay2;
 i.drumsOne.fx = nil;
 
 i.tempo=192;
