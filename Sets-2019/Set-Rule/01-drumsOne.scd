@@ -32,8 +32,6 @@ i.drumsOne.play
 i.drumsOne.stop
 
 
-
-
 i.tempo=192;
 i.tempo=180;
 i.tempo=140;
