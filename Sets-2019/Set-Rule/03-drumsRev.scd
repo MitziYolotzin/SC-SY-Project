@@ -15,11 +15,20 @@ i.drumsRev.c.seq("1x4 1  1   1 1x4 1 1");
 i.drumsRev.go(0);
 i.drumsRev.go(10);
 
+i.drumsRev.clock=1/2;
+i.drumsRev.fx=\delay1;
+i.drumsRev.fx=nil;
 
-i.drumsRev.seq(\fx,  [\lpf,
-\resonz,
-\moogFilter,nil]);
+i.every(8,{
 
+i.drumsRev.fxSet(\delay,1/[2, 4, 6, 8].choose);
+i.drumsRev.fxSet(\lag,1/[1/2, 1, 2, 4, 6, 8].choose);
+i.drumsRev.clock=1/[1/2, 1, 2, 4, 6, 8].choose;
+
+});
+
+i.drumsRev.clock=1/2;
+i.drumsRev.clock=1;
 
 
 (

@@ -10,8 +10,10 @@ p=ProxySpace.push(s);
 ~mix= ~down;
 //alternate
 ~sin={SinOsc.ar(36.midicps*Array.rand(4, 0.2, 4) ,0,1).tanh/4 ! 2};
+~sin={|notes=#[30, 60]|(SinOsc.ar(notes.midicps*Array.exprand(5, 0.2, 3),0,1)).tanh/5 ! 2};
 ~sin={SinOsc.ar(38.midicps*Array.rand(4, 0.2, 4) ,0,1).tanh/4 ! 2};
 ~sin={SinOsc.ar(40.midicps*Array.rand(4, 0.2, 4) ,0,1).tanh/4 ! 2};
+~mix = ~sin;
 ~mix = ~down + ~sin;
 //kraken crawl noise
 ~crak={(Crackle.ar(Saw.kr(1/3).linlin(-1,1,2,1), 0.5, 0.05)*4 + Impulse.ar(Lag2.kr(LFDClipNoise.kr(~tempo.kr/4, 200,200),1) )/2).tanh/1.5 ! 2 };
@@ -31,7 +33,6 @@ p=ProxySpace.push(s);
 ~mix.fadeTime=5;
 ~mix={0};
 //////////////3 REBROKEN noise
-
 //////////////broken freq
 ~mix.fadeTime=3;
 //rrrrrrrr pulse

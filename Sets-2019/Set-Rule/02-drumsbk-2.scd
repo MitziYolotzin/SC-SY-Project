@@ -10,7 +10,6 @@ i.drumsbk = (
 	s1: INSTRUMENT(i.synths.snareNeuro),
 	hh1: INSTRUMENT(i.synths.hihat[2]),
 	hh2: INSTRUMENT(i.synths.hihat[0]),
-
 );
 
 i.drumsbk.k[0].seq("2 :1/8 1x8");

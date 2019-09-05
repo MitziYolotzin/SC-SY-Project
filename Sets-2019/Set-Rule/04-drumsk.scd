@@ -3,10 +3,10 @@ i.drumsk=(
 	kk: INSTRUMENT(i.synths.kick[8]),
 	hihatk: INSTRUMENT(i.synths.hihat[1]),
 	snarek: INSTRUMENT(i.synths.snareNeuro),
-)
+);
 
-i.drumsk.clock=1/3
-i.drumsk.amp=1.2;
+	i.drumsk.clock=1/3
+	i.drumsk.amp=1.2;
 
 (
 	i.drumsk.hihatk.seq("1x2 :2 1").speed(4);
@@ -25,8 +25,8 @@ i.drumsk.amp=1.2;
 	i.drumsk.clock=2;
 )
 
-i.drumsk.go(0);
-i.drumsk.go(190);
+	i.drumsk.go(0);
+	i.drumsk.go(190);
 
-i.drumsk.stop;
-i.drumsk.play:
+	i.drumsk.stop;
+	i.drumsk.play;
