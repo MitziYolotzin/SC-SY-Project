@@ -15,19 +15,24 @@ i.basstt.stop;
 i.drumsOne.stop;
 //////beat bass
 
-i.beatBass = (
- kickdeep: INSTRUMENT(i.synths.kick.kickDeep),
- //basss: INSTRUMENT(i.synths.trance[2]),
- bassz: INSTRUMENT(i.synths.trance[3])
+i.clear;
+//k 8, 9, 10, 12
+ i.beatBass = (
+     kickdeep: INSTRUMENT(i.synths.kick.kickDeep),
+   //basss: INSTRUMENT(i.synths.trance[2]),
+     kssz: INSTRUMENT(i.synths.kick[8]),
+	 ksszz: INSTRUMENT(i.synths.kick[12])
 );
 
 i.beatBass.kickdeep.seq("1x3 1").speed(2);
-i.beatBass.kickdeep.amp=2;
+i.beatBass.kickdeep.amp=4;
 
-i.beatBass.bassz.seq(" 1x4 ").speed(2);
-//i.beatBass.bassz.seq("1").speed(4);
+i.beatBass.kssz.seq("1 1x4 ").speed(2);
+i.beatBass.kssz.amp=2;
 
-i.clear;
+i.beatBass.ksszz.seq("1x4 ").speed(2);
+i.beatBass.ksszz.amp=1.5;
+
 i.beatBass.play;
 
 i.beatBass.go(0);
@@ -38,7 +43,7 @@ i.beatBass.clock=4;
 i.beatBass.clock=2;
 
 i.beatBass.basss.amp=3;
-i.clear;
+
 i.beatBass.play;
 i.beatBass.stop;
 
@@ -62,12 +67,12 @@ i.drumsbk = (
 //i.drumsbk.k[0].seq("2 :1/8 1x8");
 i.drumsbk.k1.seq("2 :1/8 1x8 :1/2 1x2 :1/4 1x4");
 i.drumsbk.k1.seq("1x2 1x3 1 :1/2 1xxx 1x4").speed(2);
-//
-i.clear;
-i.beatBass.play;
+
 i.drumsbk.play;
+
+i.drumsbk.amp=2;
 //opc
-i.drumsbk.k2.seq("2 :1/2 1x2").speed(2);
+i.drumsbk.k2.seq("2 :1/2 1x2").speed(4);
 i.drumsbk.k2.amp=1.5;
 
 ~mix= {0};
@@ -97,8 +102,7 @@ i.drumsbk.fx = \distortion;
 i.drumsbk.fx = nil;
 
 //
-i.clear;
-i.beatBass.play;
+
 i.drumsbk.play;
 i.drumsbk.stop;
 

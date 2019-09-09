@@ -11,21 +11,22 @@
 ~mix.fadeTime=5;
 ~mix={0};
 //////////
-//i.beatBass.stop;
-  i.drumsbk.stop;
 
+  i.drumsbk.stop;
   i.beatBass.play;
 //////////////////P4
+i.clear;
+
 i.drumske=(
-	kkk: INSTRUMENT(i.synths.kick[8]),
-	hihatkk: INSTRUMENT(i.synths.hihat[1]),
+	kkk: INSTRUMENT(i.synths.kick[12]),
+	hihatkk: INSTRUMENT(i.synths.hihat[2]),
 	snarekk: INSTRUMENT(i.synths.snareNeuro),
 	snarekb: INSTRUMENT(i.synths.snareBass),
 );
 
-	i.drumske.kkk[0].seq("1x2 :1/3 1x3 1x3").speed(4).do(2);
-	i.drumske.kkk[1].seq("1x4 1x2  1x4 ").speed(4);
-	i.drumske.kkk.amp=1.5;
+	i.drumske.kkk.seq("1x2 :1/3 1x3 1x3").speed(4).do(2);
+	i.drumske.kkk.seq("1x4 1x2  1x4 ").speed(4);
+	i.drumske.kkk.amp=2;
 
 	i.drumske.hihatkk.seq("1x2 :2 1").speed(4);
 	i.drumske.hihatkk.amp=1.2;
@@ -41,6 +42,8 @@ i.drumske=(
 	i.drumske.snarekb.amp=1.2;
 
 )
+
+    i.drumske.amp=3;
 
 	i.drumske.clock=1;
     i.drumske.clock=2;
@@ -62,10 +65,7 @@ i.drumske.clock=1/8;
 
 i.beatBass.clock=1;
 
-    i.clear;
-    i.beatBass.play;
 	i.drumske.play;
-
     i.drumske.stop;
 /////////////////////
   ~mix= ~hc1;
@@ -73,11 +73,13 @@ i.beatBass.clock=1;
   ~mix= ~hc3;
 
  i.beatBass.clock=1/8;
+ i.beatBass.clock=1/4;
+ i.beatBass.stop;
  i.drumske.stop;
 //////////////////*******wprin vhgyyernaslngsdf  SatrimYersang****
   ~mix.fadeTime=5;
   ~mix={0};
-  i.beatBass.stop;
+
 
 ////////MIkkkkccccccxxxx
 (
@@ -171,6 +173,6 @@ i.drumsRev = (
 
   i.clear;
   i.drumsRev.play;
-i.drumske.play;
+  i.drumske.play;
   i.drumsRev.stop;
 

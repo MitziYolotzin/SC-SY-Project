@@ -4,6 +4,8 @@ i.evilmelodies.stop;
 ~mix={0};
 
 /////////////////P2
+i.clear;
+
 i.basstt = (
    bass1: INSTRUMENT(i.synths.bass.trance[2]),
    bass2: INSTRUMENT(i.synths.bass.trance[1])
@@ -12,19 +14,18 @@ i.basstt = (
 i.basstt.bass1.note(":1/8 1x8").speed(2);
 i.basstt.bass1.clock=1/2;
 i.basstt.bass1.octave=4;
-i.basstt.bass1.amp=2.5;
+i.basstt.bass1.amp=4;
 
-i.clear;
 i.basstt.play;
 
 i.basstt.bass2.note("1 :1/4 1x4 1x2 :1/2 1x2 1").speed(2);
 i.basstt.bass2.clock=1/2;
-i.basstt.bass2.octave=5;
-i.basstt.bass2.amp=2;
+i.basstt.bass2.octave=4;
+i.basstt.bass2.amp=3;
 
+i.basstt.bass2.octave=4;
 i.basstt.bass2.octave=5;
 i.basstt.bass2.octave=6;
-i.basstt.bass2.octave=7;
 
 /// 2
 i.basstt.bass1.octave=4;
@@ -36,36 +37,35 @@ i.basstt.go(0);
 i.basstt.go(221);
 i.basstt.go(333);
 
-i.clear;
+
 i.basstt.play;
 i.basstt.stop;
 ////////////////////
 // beat drumsOne
 //i=INSTRUMENT().play;
+//k 6, 8, 9, 10, 12
 
 i.drumsOne = (
-	k: INSTRUMENT(i.synths.kick[5]),
+	k: INSTRUMENT(i.synths.kick[6]),
 	s: INSTRUMENT(i.synths.snare[1]),
 	h: INSTRUMENT(i.synths.hihat[4])
 );
 
 i.drumsOne.amp=2;
-i.drumsOne.k.seq("1 2xx ").speed(2);
-i.drumsOne.k.amp=2.5;
+i.drumsOne.k.seq("1 1xx 1x4 ").speed(2);
+i.drumsOne.k.amp=1.5;
 i.drumsOne.s.seq(" 1");
 i.drumsOne.s.seq(" 1   1xx").speed(2);
-i.drumsOne.s.amp=2;
+i.drumsOne.s.amp=1.7;
 i.drumsOne.h.seq("1xx  1xx  1xx").speed(2);
-i.drumsOne.h.seq("0").speed(4);
 i.drumsOne.h.amp=2;
 
 i.drumsOne.go(0);
 i.drumsOne.go(133);
 i.drumsOne.go(99);
 
-i.clear;
-i.basstt.play;
 i.drumsOne.play;
+i.drumsOne.stop;
 ///////////
 //////////2 HELICE tone atmosphere low
 ~pul2={Pulse.ar(400*Array.rand2(5, 30), 0.2, 0.2 ).tanh /8 ! 2};
@@ -101,8 +101,6 @@ i.drumsOne.go(0);
 i.drumsOne.go(155);
 
 ///////////////////
-i.clear;
-i.basstt.play;
 i.drumsOne.play;
 i.drumsOne.stop
 ///

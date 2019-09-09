@@ -1,6 +1,7 @@
 //Server.killAll;
 // 1 INTRO
 p=ProxySpace.push(s);
+i=INSTRUMENT().play
 
 ~mix.play;
 ~mix.quant=1;
@@ -34,20 +35,20 @@ i.evilmelodies = (
 ///
 i.evilmelodies.amp=1.75;
 
-i.evilmelodies.kick[0].seq("1").speed(1).x(5);
-i.evilmelodies.kick[1].seq("1").speed(1/2).x(4);
+i.evilmelodies.kick.seq("1").speed(2).x(4);
+i.evilmelodies.kick.seq("1").speed(1/2).x(4);
 i.evilmelodies.kick.amp=1.5;
 //
 i.evilmelodies.note1.note(" 0 3 7").speed(4);
 i.evilmelodies.note1.note(" 0 3 7 1.5 0.5 ").speed(2).x(2);
 i.evilmelodies.note1.amp=1.5;
 ///
-i.evilmelodies.note2.note("0 5 0").speed(2);
+//i.evilmelodies.note2.note("0 5 0").speed(2);
 i.evilmelodies.note2.note("3 5 3").speed(4);
-i.evilmelodies.note2.amp=1.75;
-i.evilmelodies.note3.note("0 5 0").speed(2).x(4);
+i.evilmelodies.note2.amp=2;
+//i.evilmelodies.note3.note("0 5 0").speed(2).x(4);
 i.evilmelodies.note3.note("2.5 7 2.5").speed(4).x(2);
-
+i.evilmelodies.note3.amp=1.75;
 //i.evilmelodies.note1.amp=1/2;
 
 i.evilmelodies.go(0);
@@ -61,6 +62,5 @@ i.evilmelodies.clock=1/4;
 i.evilmelodies.clock=1;
 
 /////P2
-i.clear;
 i.evilmelodies.play;
 i.evilmelodies.stop;
